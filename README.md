@@ -61,7 +61,7 @@ task-manager-api/
 Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/task-manager-api.git
+git clone https://github.com/Smit-Makwana/24it046-smit-task-manager-api-24it046.git
 ```
 
 Move into the project folder
@@ -325,8 +325,8 @@ Requests Tested:
 
 ## Author
 
-**Kalpesh Gausvami**
+**Smit Makwana**
 
-B.Tech Information Technology
-
+ID: 24IT046  
+B.Tech Information Technology  
 CHARUSAT University
