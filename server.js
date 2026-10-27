@@ -45,6 +45,20 @@ function validateTaskId(req, res, next) {
   next();
 }
 
+// ================= ROOT / HEALTH =================
+app.get("/", (req, res) => {
+  res.json({
+    message: "Task Manager API is running (Practical 5)",
+    endpoints: {
+      getTasks: "GET /tasks",
+      getTaskById: "GET /tasks/:id",
+      createTask: "POST /tasks",
+      updateTask: "PUT /tasks/:id",
+      deleteTask: "DELETE /tasks/:id",
+    },
+  });
+});
+
 // ================= GET ALL =================
 app.get("/tasks", async (req, res, next) => {
   try {

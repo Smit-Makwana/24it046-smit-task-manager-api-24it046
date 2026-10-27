@@ -21,11 +21,17 @@ enum:["low","medium","high"],
 default:"low"
 },
 
-createdAt:{
-type:Date,
-default:Date.now
-}
-
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
-module.exports=mongoose.model("Task",taskSchema);
+// Supplementary: Pre-save hook that automatically trims whitespace from the title field
+taskSchema.pre("save", function () {
+  if (this.title) {
+    this.title = this.title.trim();
+  }
+});
+
+module.exports = mongoose.model("Task", taskSchema);
